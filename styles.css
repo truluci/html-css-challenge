@@ -175,6 +175,7 @@ body {
 
 #body-wrapper-graphs-mrr-graph-country-data-wrapper {
     position: relative;
+    display: flex;
     top: 50%;
     left: 53%;
     width: 80%;
@@ -274,21 +275,12 @@ body {
     position: relative;
 }
 
-#rectangle1, #rectangle2, #rectangle3, #rectangle4, #rectangle5, #rectangle6 {
-    position: absolute;
-    top: -300px;
-    left: 0;
-    right: 0;
-    width: 40px;
-    height: 200px;
-    margin: 0 auto;
-    background-color: black;
-    z-index: 1;
-}
-
 /* Responsive CSS */
 @media (max-width: 1310px) {
-    #body-wrapper-rates > div,
+    #body-wrapper-rates > div {
+        width: calc((300vh) / 7);
+    }
+
     #body-wrapper-graphs > div {
         width: calc(100% - 10px);
     }
@@ -304,5 +296,11 @@ body {
 
     #body-wrapper-graphs {
         flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 1115px){
+    #body-wrapper-rates > div {
+        width: calc(100% - 10px);
     }
 }
