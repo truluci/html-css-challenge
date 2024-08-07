@@ -60,6 +60,29 @@ body {
 #previous {
     font-size: 10px;
     color: #a3a3a3;
+    padding-top: 15px;
+}
+
+#body-wrapper-rates-view-chart-referral,
+#body-wrapper-rates-view-chart-direct,
+#body-wrapper-rates-view-chart-organic-search{
+    font-size: 12px;
+    position: relative;
+}
+
+#body-wrapper-rates-view-chart-referral {
+    top: 45%;
+    left: -70px;
+}
+
+#body-wrapper-rates-view-chart-direct {
+    top: 40px;
+    left: 40px;
+}
+
+#body-wrapper-rates-view-chart-organic-search {
+    top: 150px;
+    left: 40px;
 }
 
 #body-wrapper-rates-view-chart-data {
@@ -113,7 +136,105 @@ body {
     margin-top: 30px;
 }
 
-#body-wrapper-graphs-mrr-graph-month-data-x > div {
+#body-wrapper-graphs-mrr-graph-country-data-y-values{
+    color: #ccc;
+    font-size: 14px;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    height: 300px;
+}
+
+#body-wrapper-graphs-mrr-graph-country-data-y-values > div {
+    display: flex;
+    left: 0;
+    align-items: center;
+    margin: 23px 0;
+}
+
+#body-wrapper-graphs-mrr-graph-country-data-x-values {
+    color: #ccc;
+    font-size: 14px;
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+    position: relative;
+    left: 70px;
+}
+
+#body-wrapper-graphs-mrr-graph-country-data-y-line {
+    position: absolute;
+    top: 0;
+    margin-left: 60px;
+    width: 1px;
+    height: 343px;
+    margin-top: 50px;
+    background-color: #ccc;
+    transform: translateX(-50%);
+}
+
+#body-wrapper-graphs-mrr-graph-country-data-wrapper {
+    position: relative;
+    top: 50%;
+    left: 53%;
+    width: 80%;
+    height: 300px;
+    transform: translate(-50%, -50%);
+}
+
+#body-wrapper-graphs-mrr-graph-country-data-x-line {
+    position: absolute;
+    top: 82.5%;
+    margin-left: 60px;
+    width: 80%;
+    height: 1px;
+    background-color: #ccc;
+    transform: translateY(-50%);
+}
+
+#body-wrapper-graphs-mrr-graph-country-data-countries{
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    font-size: 14px;
+    position: absolute;
+    top: 90%;
+    left: 16%;
+}
+
+#body-wrapper-graphs-mrr-graph-country-data-countries-us {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #f0d3f7;
+    align-self: center;
+}
+
+#body-wrapper-graphs-mrr-graph-country-data-countries-au {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ffcf9d;
+    align-self: center;
+}
+
+#body-wrapper-graphs-mrr-graph-country-data-countries-ca {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #b6ceee;
+    align-self: center;
+}
+
+#body-wrapper-graphs-mrr-graph-country-data-countries-uk {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ff9737;
+    align-self: center;
+}
+
+#body-wrapper-graphs-mrr-graph-month-data-y > div {
     position: relative;
     display: flex;
     align-items: center;
@@ -122,19 +243,19 @@ body {
     padding: 6px;
 }
 
-#body-wrapper-graphs-mrr-graph-month-data-x-value {
+#body-wrapper-graphs-mrr-graph-month-data-y-value {
     font-size: 14px;
     margin-left: 10px;
 }
 
-#body-wrapper-graphs-mrr-graph-month-data-x #line {
+#body-wrapper-graphs-mrr-graph-month-data-y #line {
     height: 1px;
     background-color: #ccc;
     margin-left: 10px;
     flex-grow: 1;
 }
 
-#body-wrapper-graphs-mrr-graph-month-data-y {
+#body-wrapper-graphs-mrr-graph-month-data-x {
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
@@ -143,7 +264,7 @@ body {
     position: relative;
 }
 
-#body-wrapper-graphs-mrr-graph-month-data-y > div {
+#body-wrapper-graphs-mrr-graph-month-data-x > div {
     display: flex;
     align-items: center;
     color: #ccc;
@@ -165,72 +286,23 @@ body {
     z-index: 1;
 }
 
-#rectangle1 {
-    background: linear-gradient(to bottom, 
-    #fec649 40%,
-    #fe9f25 40%, 
-    #fe9f25 88%,  
-    #6e98d6 88%); 
-    height: 250px;
-    top: -320px;
-}
+/* Responsive CSS */
+@media (max-width: 1310px) {
+    #body-wrapper-rates > div,
+    #body-wrapper-graphs > div {
+        width: calc(100% - 10px);
+    }
 
-#rectangle2 {
-    background: linear-gradient(to bottom, 
-    #fec649 40%,
-    #fe9f25 40%, 
-    #fe9f25 80%,
-    #78af6a 80%,
-    #78af6a 85%, 
-    #6e98d6 60%);     
-    height: 295px;
-    top: -337px;
-}
+    #body-wrapper-graphs-mrr-graph-country {
+        display: flex;
+        height: 435px;
+    }
 
-#rectangle3 {
-    background: linear-gradient(to bottom, 
-    #fec649 40%,
-    #fe9f25 40%, 
-    #fe9f25 85%,
-    #78af6a 85%,
-    #78af6a 92%, 
-    #6e98d6 10%);   
-    height: 265px;
-    top: -325px;
-}
+    #body-wrapper-rates {
+        flex-wrap: wrap;
+    }
 
-#rectangle4 {
-    background: linear-gradient(to bottom, 
-    #fec649 40%,
-    #fe9f25 40%, 
-    #fe9f25 85%,
-    #78af6a 85%,
-    #78af6a 92%, 
-    #6e98d6 10%);   
-    height: 285px;
-    top: -343px;
-}
-
-#rectangle5 {
-    background: linear-gradient(to bottom, 
-    #fec649 40%,
-    #fe9f25 40%, 
-    #fe9f25 80%,
-    #78af6a 80%,
-    #78af6a 83%, 
-    #6e98d6 10%);   
-    height: 255px;
-    top: -305px;
-}
-
-#rectangle6 {
-    background: linear-gradient(to bottom, 
-    #fec649 30%,
-    #fe9f25 30%, 
-    #fe9f25 80%,
-    #78af6a 80%,
-    #78af6a 83%, 
-    #6e98d6 10%); 
-    height: 139px;
-    top: -212px;
+    #body-wrapper-graphs {
+        flex-wrap: wrap;
+    }
 }
